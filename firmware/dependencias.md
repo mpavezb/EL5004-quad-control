@@ -16,3 +16,12 @@ A continuación se describen los archivos
 
 # src/main/mw.c
 * loop(): función que controla dinámicamente el quad.
+
+# src/main/flight/pid.c
+* pid_controller: puntero a función de tipo void (*pidControllerFuncPtr)(pidProfile_t *pidProfile, controlRateConfig_t *controlRateConfig, uint16_t max_angle_inclination, rollAndPitchTrims_t *angleTrim, rxConfig_t *rxConfig); Esta función es la que calcula los errores de angulos que son usados por el mixer según la referencia y su posición actual.
+
+# src/main/flight/mixer.c
+
+* mixers: struct de mixer_t
+* mixTable(): toma los errores de angulos calculaods por la funcion apuntada por pid_controller y ejecuta el mixing con lo que calcula las acciones que deben tomar los motores. 
+
