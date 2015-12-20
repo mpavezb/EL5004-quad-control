@@ -1,13 +1,18 @@
-## Perroptero
+# Dependencias
 
-Descripcion general de los archivos dentro del proyecto "Perroptero"
-basado en CleanFlight (URL: https://github.com/cleanflight/cleanflight/)
+Antes de empezar:
 
-Obejtivo principal de Perroptero es proveer de un setup experimental para
-técnicas de control sobre UAVs. En este documento se describen "que hacen" los 
-diferentes archivos y directorios dentro del proyecto.
+* El archivo "firmware/obj/cleanflight_CC3D.hex" corresponde al binario listo para ser cargado a la CC3D
+* Para cargar (flashear) la CC3D con el nuevo binario puede utilizar la GUI
+de cleanflight (https://github.com/cleanflight/cleanflight-configurator) y usar la opcion "Load Firmware[Local] > Flash Firmware"
+
+Archivos:
+
+A continuación se describen los archivos
+
+# src/main/main.c
+* init(): funcióm que setea las configuraciones y diferentes funcionalidades del quad.
 
 
-*"cleanflight_CC3D.hex" binario listo para ser cargado a la CC3D mediante cleanflight-configurator
-*"mw.c"
-*"main.c"
+# src/main/mw.c
+* loop(): función que controla dinámicamente el quad.

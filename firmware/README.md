@@ -6,8 +6,5 @@ técnicas de control sobre UAVs.
 El proyecto "Perroptero"esta basado en el proyecto CleanFlight: 
 * master URL: https://github.com/cleanflight/cleanflight/
 
-En este documento se describen "que hacen" los diferentes archivos y directorios dentro del proyecto.
-
-*".hex" binario listo para ser cargado a la CC3D mediante cleanflight-configurator
-*"mw.c"
-*"main.c"
+Para ver que es lo que necesita modificar para implementar nuevas técnicas de control
+lea el archivo "dependencias" (https://github.com/mpavezb/EL5004-quad-control/blob/master/firmware/dependencias.md)
