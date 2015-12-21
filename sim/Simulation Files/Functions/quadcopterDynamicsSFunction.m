@@ -477,7 +477,10 @@ Dist_F   = block.InputPort(5).Data(4:6);
 % The experimental determination of Ct and Cq should be adjusted to
 % model using kg instead of ounces or lb
 % Mb = (quad.dctcq*(w.^2)) + (Dist_tau);  %(dctcq*(w.^2)); % Mb = [tau1 tau2 tau3]'
- tau_motorGyro = [Q*quad.Jm*2*pi/60*(-w1-w3+w2+w4); P*quad.Jm*2*pi/60*(w1+w3-w2-w4); 0]; % Note: 2*pi/60 required to convert from RPM to radians/s
+ tau_motorGyro = [...
+     Q*quad.Jm*2*pi/60*(-w1-w3+w2+w4);...
+     P*quad.Jm*2*pi/60*(w1+w3-w2-w4);...
+     0]; % Note: 2*pi/60 required to convert from RPM to radians/s
  Mb = (quad.dctcq*(w.^2))+ tau_motorGyro + (Dist_tau);  % Mb = [tau1 tau2 tau3]'
 
 % Thrust due to motor speed
